@@ -108,6 +108,7 @@ void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 
 /* ************************************************************************** */
 /*                               FT_PRINTF Functions                          */

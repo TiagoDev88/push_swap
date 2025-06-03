@@ -23,7 +23,8 @@ MLX_DIR = minilibx-linux
 MLX = $(MLX_DIR)/libmlx.a
 
 SRC_DIR = src
-SRCS = src/main.c
+SRCS = src/main_tester.c src/init_stack.c src/validate_args.c src/utils_stack.c \
+		src/oper_swap.c
 
 SRC_DIR_BONUS = src_bonus
 SRCS_BONUS = 

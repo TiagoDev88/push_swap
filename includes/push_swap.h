@@ -14,19 +14,34 @@
 #define PUSH_SWAP_H
 
 # include "../includes/libft/libft.h"
+# include <stdlib.h>
+# include <limits.h>
+# include <stdbool.h>
 
-typedef struct s_stack
+typedef struct s_node
 {
-	int				value;
-	int				size;
-	struct s_stack *next;
-} t_stack;
+    int             value;
+    int             index;
+    struct s_node  *next;
+}   t_node;
+
+typedef struct s_stack {
+	t_node	*top;
+	int		size;
+}	t_stack;
+
+t_stack *init_stack(int argc, char **argv);
+void sa(t_stack *stack_a);
+void sb(t_stack *stack_b);
+void ss(t_stack *stack_a, t_stack *stack_b);
+int	validate_args(int argc, char **argv);
+void free_stack(t_stack *stack);
+
+/* ************************************************************************** */
+
 
 /* ****************************** func_linked_list ************************** */
-void free_stack(t_stack **stack);
-int size_stack(t_stack *stack);
-void add_top(t_stack **stack, t_stack *new);
-t_stack *new_node(int value);
+
 
 /* ****************************** main ************************************** */
 
