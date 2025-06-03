@@ -35,14 +35,12 @@ int	main(int argc, char **argv)
 		ft_printf("Error\n");
 		return (1);
 	}
-	stack_b = malloc(sizeof(t_stack));
+	stack_b = ft_calloc(1, sizeof(t_stack));
 	if (!stack_b)
 	{
 		free_stack(stack_a);
 		return (1);
 	}
-	stack_b->top = NULL;
-	stack_b->size = 0;
 	print_stack(stack_a, "A");
 	sa(stack_a);
 	print_stack(stack_a, "A after sa");

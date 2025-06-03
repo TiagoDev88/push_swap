@@ -72,12 +72,9 @@ t_stack	*init_stack(int argc, char **argv)
 	int		i;
 	int		value;
 
-	stack = malloc(sizeof(t_stack));
+	stack = ft_calloc(1, sizeof(t_stack));
 	if (!stack)
 		return (NULL);
-	stack->top = NULL;
-	stack->size = 0;
-
 	i = 1;
 	while (i < argc)
 	{
