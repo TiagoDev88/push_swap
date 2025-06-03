@@ -36,6 +36,8 @@ void sb(t_stack *stack_b);
 void ss(t_stack *stack_a, t_stack *stack_b);
 int	validate_args(int argc, char **argv);
 void free_stack(t_stack *stack);
+void pb(t_stack *from, t_stack *to);
+void pa(t_stack *from, t_stack *to);
 
 /* ************************************************************************** */
 

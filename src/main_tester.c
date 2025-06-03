@@ -42,9 +42,12 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	print_stack(stack_a, "A");
-	sa(stack_a);
-	print_stack(stack_a, "A after sa");
+	pb(stack_a, stack_b);
+	print_stack(stack_a, "A");
+	ss(stack_a, stack_b);
+	//print_stack(stack_a, "A after sa");
 	print_stack(stack_b, "b");
+	print_stack(stack_a, "A");
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);
