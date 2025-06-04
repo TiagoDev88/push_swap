@@ -43,6 +43,9 @@ void add_top(t_node **stack, t_node *new);
 void rrr(t_node **stack_a, t_node **stack_b);
 void rrb(t_node **stack);
 void rra(t_node **stack);
+void ra(t_node **stack);
+void rb(t_node **stack);
+void rr(t_node **stack_a, t_node **stack_b);
 
 /* ************************************************************************** */
 

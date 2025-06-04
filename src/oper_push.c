@@ -16,7 +16,7 @@ static bool push(t_node **from, t_node **to)
 {
 	t_node *tmp;
 
-	if (!from || !*from)
+	if (!from || !*from || !to)
 		return (false);
 
 	tmp = *from;

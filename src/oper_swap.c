@@ -17,7 +17,7 @@ static bool	swap(t_node **stack)
 	t_node	*first;
 	t_node	*second;
 
-	if (!stack || !(*stack)->next)
+	if (!stack || !(*stack) || !(*stack)->next)
 		return (false);
 	first = *stack;
 	second = first->next;
@@ -42,11 +42,11 @@ void	sb(t_node **stack_b)
 
 void	ss(t_node **stack_a, t_node **stack_b)
 {
-	bool	sa_ok;
-	bool	sb_ok;
+	bool	sa;
+	bool	sb;
 
-	sa_ok = swap(stack_a);
-	sb_ok = swap(stack_b);
-	if (sa_ok || sb_ok)
+	sa = swap(stack_a);
+	sb = swap(stack_b);
+	if (sa || sb)
 		ft_printf("ss\n");
 }
