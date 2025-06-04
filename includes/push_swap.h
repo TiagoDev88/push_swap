@@ -46,6 +46,8 @@ void rra(t_node **stack);
 void ra(t_node **stack);
 void rb(t_node **stack);
 void rr(t_node **stack_a, t_node **stack_b);
+int stack_size(t_node *stack);
+void sort_up_to_five(t_node **stack);
 
 /* ************************************************************************** */
 

@@ -12,8 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-//funções da linked list (stack)
-
 void free_stack(t_node **stack)
 {
     t_node *current;
@@ -30,4 +28,19 @@ void free_stack(t_node **stack)
         free(temp);
     }
     *stack = NULL;
+}
+
+int	stack_size(t_node *stack)
+{
+	t_node	*ptr;
+	int		count;
+
+	count = 0;
+	ptr = stack;
+	while (ptr != NULL)
+	{
+		ptr = ptr->next;
+		count++;
+	}
+	return (count);
 }
