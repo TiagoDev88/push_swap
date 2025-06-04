@@ -29,5 +29,5 @@ void free_stack(t_node **stack)
         current = current->next;
         free(temp);
     }
-    free(stack);
+    *stack = NULL;
 }

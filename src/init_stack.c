@@ -12,19 +12,19 @@
 
 #include "../includes/push_swap.h"
 
-static void	assign_indexes(t_node **stack)
+static void	assign_indexes(t_node *stack)
 {
 	t_node	*current;
 	t_node	*compare;
 	int		index;
 
-	if (!stack || !*stack)
+	if (!stack)
 		return ;
-	current = *stack;
+	current = stack;
 	while (current)
 	{
 		index = 0;
-		compare = *stack;
+		compare = stack;
 		while (compare)
 		{
 			if (compare->value < current->value)
@@ -71,19 +71,14 @@ t_node	*init_stack(int argc, char **argv)
 	int		i;
 	int		value;
 
-	if (argc == 1)
-		stack = malloc(sizeof(t_node));
-	else
-		stack = new_node(ft_atoi(argv[1]));
-	if (!stack)
-		return (NULL);
-	i = 2;
+	stack = NULL;
+	i = 1;
 	while (i < argc)
 	{
 		value = ft_atoi(argv[i]);
 		add_bottom(&stack, new_node(value));
 		i++;
 	}
-	assign_indexes(&stack);
+	assign_indexes(stack);
 	return (stack);
 }
