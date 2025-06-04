@@ -37,10 +37,13 @@ int	main(int argc, char **argv)
 	}
 	print_stack(stack_a, "A");
 	pb(&stack_a, &stack_b);
+	print_stack(stack_b, "b");
 	print_stack(stack_a, "A");
+	rrr(&stack_a, &stack_b);
+	print_stack(stack_a, "A");
+	print_stack(stack_b, "b");
 	//ss(&stack_a, &stack_b);
 	//print_stack(stack_a, "A after sa");
-	print_stack(stack_b, "b");
 	//print_stack(&stack_a, "A");
 	free_stack(&stack_a);
 	free_stack(&stack_b);

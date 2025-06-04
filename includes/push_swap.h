@@ -38,6 +38,11 @@ int	validate_args(int argc, char **argv);
 void free_stack(t_node **stack);
 void	pb(t_node **from, t_node **to);
 void	pa(t_node **from, t_node **to);
+void add_bottom(t_node **stack, t_node *new);
+void add_top(t_node **stack, t_node *new);
+void rrr(t_node **stack_a, t_node **stack_b);
+void rrb(t_node **stack);
+void rra(t_node **stack);
 
 /* ************************************************************************** */
 

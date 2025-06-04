@@ -14,25 +14,25 @@
 
 static void	assign_indexes(t_node *stack)
 {
-	t_node	*current;
-	t_node	*compare;
+	t_node	*current_node;
+	t_node	*others_node;
 	int		index;
 
 	if (!stack)
 		return ;
-	current = stack;
-	while (current)
+	current_node = stack;
+	while (current_node)
 	{
 		index = 0;
-		compare = stack;
-		while (compare)
+		others_node = stack;
+		while (others_node)
 		{
-			if (compare->value < current->value)
+			if (others_node->value < current_node->value)
 				index++;
-			compare = compare->next;
+			others_node = others_node->next;
 		}
-		current->index = index;
-		current = current->next;
+		current_node->index = index;
+		current_node = current_node->next;
 	}
 }
 static t_node	*new_node(int value)
@@ -48,7 +48,7 @@ static t_node	*new_node(int value)
 	return (node);
 }
 
-static void	add_bottom(t_node **stack, t_node *new)
+void	add_bottom(t_node **stack, t_node *new)
 {
 	t_node	*temp;
 
@@ -64,21 +64,40 @@ static void	add_bottom(t_node **stack, t_node *new)
 		temp->next = new;
 	}
 }
+void	add_top(t_node **stack, t_node *new)
+{
+	if (stack == NULL || new == NULL)
+		return ;
+	if (*stack == NULL)
+		*stack = new;
+	else
+	{
+		new->next = *stack;
+		*stack = new;
+	}
+}
 
 t_node	*init_stack(int argc, char **argv)
 {
-	t_node	*stack;
+	t_node	*head_node;
+	t_node	*new;
 	int		i;
 	int		value;
 
-	stack = NULL;
+	head_node = NULL;
 	i = 1;
 	while (i < argc)
 	{
 		value = ft_atoi(argv[i]);
-		add_bottom(&stack, new_node(value));
+		new = new_node(value);
+		if (!new)
+		{
+			free_stack(&head_node); 
+			return (NULL);
+		}
+		add_bottom(&head_node, new);
 		i++;
 	}
-	assign_indexes(stack);
-	return (stack);
+	assign_indexes(head_node);
+	return (head_node);
 }
