@@ -6,41 +6,41 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:02:57 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 16:02:57 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/04 11:03:37 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static bool	swap(t_stack *stack)
+static bool	swap(t_node **stack)
 {
 	t_node	*first;
 	t_node	*second;
 
-	if (!stack || stack->size < 2)
+	if (!stack || !(*stack)->next)
 		return (false);
-	first = stack->top;
+	first = *stack;
 	second = first->next;
 
 	first->next = second->next;
 	second->next = first;
-	stack->top = second;
+	*stack = second;
 	return (true);
 }
 
-void	sa(t_stack *stack_a)
+void	sa(t_node **stack_a)
 {
 	if (swap(stack_a))
 		ft_printf("sa\n");
 }
 
-void	sb(t_stack *stack_b)
+void	sb(t_node **stack_b)
 {
 	if (swap(stack_b))
 		ft_printf("sb\n");
 }
 
-void	ss(t_stack *stack_a, t_stack *stack_b)
+void	ss(t_node **stack_a, t_node **stack_b)
 {
 	bool	sa_ok;
 	bool	sb_ok;

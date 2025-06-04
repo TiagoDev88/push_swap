@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:49:35 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 13:50:29 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/04 11:09:42 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ typedef struct s_stack {
 	int		size;
 }	t_stack;
 
-t_stack *init_stack(int argc, char **argv);
-void sa(t_stack *stack_a);
-void sb(t_stack *stack_b);
-void ss(t_stack *stack_a, t_stack *stack_b);
+t_node	*init_stack(int argc, char **argv);
+void	sa(t_node **stack_a);
+void	sb(t_node **stack_b);
+void	ss(t_node **stack_a, t_node **stack_b);
 int	validate_args(int argc, char **argv);
-void free_stack(t_stack *stack);
-void pb(t_stack *from, t_stack *to);
-void pa(t_stack *from, t_stack *to);
+void free_stack(t_node **stack);
+void	pb(t_node **from, t_node **to);
+void	pa(t_node **from, t_node **to);
 
 /* ************************************************************************** */
 

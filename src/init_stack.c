@@ -6,25 +6,25 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:02:05 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 16:02:05 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/04 14:55:29 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void	assign_indexes(t_stack *stack)
+static void	assign_indexes(t_node **stack)
 {
 	t_node	*current;
 	t_node	*compare;
 	int		index;
 
-	if (!stack || !stack->top)
+	if (!stack || !*stack)
 		return ;
-	current = stack->top;
+	current = *stack;
 	while (current)
 	{
 		index = 0;
-		compare = stack->top;
+		compare = *stack;
 		while (compare)
 		{
 			if (compare->value < current->value)
@@ -48,40 +48,42 @@ static t_node	*new_node(int value)
 	return (node);
 }
 
-static void	add_bottom(t_stack *stack, t_node *new)
+static void	add_bottom(t_node **stack, t_node *new)
 {
 	t_node	*temp;
 
 	if (!stack || !new)
 		return ;
-	if (!stack->top)
-		stack->top = new;
+	if (!*stack)
+		*stack = new;
 	else
 	{
-		temp = stack->top;
+		temp = *stack;
 		while (temp->next)
 			temp = temp->next;
 		temp->next = new;
 	}
-	stack->size++;
 }
 
-t_stack	*init_stack(int argc, char **argv)
+t_node	*init_stack(int argc, char **argv)
 {
-	t_stack	*stack;
+	t_node	*stack;
 	int		i;
 	int		value;
 
-	stack = ft_calloc(1, sizeof(t_stack));
+	if (argc == 1)
+		stack = malloc(sizeof(t_node));
+	else
+		stack = new_node(ft_atoi(argv[1]));
 	if (!stack)
 		return (NULL);
-	i = 1;
+	i = 2;
 	while (i < argc)
 	{
 		value = ft_atoi(argv[i]);
-		add_bottom(stack, new_node(value));
+		add_bottom(&stack, new_node(value));
 		i++;
 	}
-	assign_indexes(stack);
+	assign_indexes(&stack);
 	return (stack);
 }
