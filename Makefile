@@ -6,7 +6,7 @@
 #    By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 10:51:27 by tfilipe-          #+#    #+#              #
-#    Updated: 2025/06/03 11:51:57 by tfilipe-         ###   ########.fr        #
+#    Updated: 2025/06/05 16:16:57 by tfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 NAME_BONUS = checker
 
 CC = cc
-CFLAGS =  -Wall -Wextra -Werror -I includes -I libft
+CFLAGS =   -I includes -I libft
 
 LIBFT_DIR = includes/libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -25,7 +25,7 @@ MLX = $(MLX_DIR)/libmlx.a
 SRC_DIR = src
 SRCS = src/main_tester.c src/init_stack.c src/validate_args.c src/utils_stack.c \
 		src/oper_swap.c src/oper_push.c src/oper_reverse.c src/oper_rotate.c \
-		src/sort_up_to_five.c
+		src/push_swap.c
 
 SRC_DIR_BONUS = src_bonus
 SRCS_BONUS = 

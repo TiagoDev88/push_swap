@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:04:12 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/04 11:06:01 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/05 10:46:15 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,26 @@ static bool push(t_node **from, t_node **to)
 	return (true);
 }
 
+/**
+ * @brief Take the first element at the top of B
+ * and put it at the top of A.
+ * 
+ * Do nothing if B is empty
+ * @param stacks The stack FROM and TO.
+ */
 void	pa(t_node **from, t_node **to)
 {
 	if (push(from, to))
 		ft_printf("pa\n");
 }
 
+/**
+ * @brief Take the first element at the top of A
+ * and put it at the top of B.
+ * 
+ * Do nothing if A is empty
+ * @param stacks The stack FROM and TO.
+ */
 void	pb(t_node **from, t_node **to)
 {
 	if (push(from, to))

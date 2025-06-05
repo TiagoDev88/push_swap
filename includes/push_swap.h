@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:49:35 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/04 11:09:42 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/05 15:48:13 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,6 @@ typedef struct s_node
     struct s_node  *next;
 }   t_node;
 
-typedef struct s_stack {
-	t_node	*top;
-	int		size;
-}	t_stack;
 
 t_node	*init_stack(int argc, char **argv);
 void	sa(t_node **stack_a);
@@ -47,7 +43,9 @@ void ra(t_node **stack);
 void rb(t_node **stack);
 void rr(t_node **stack_a, t_node **stack_b);
 int stack_size(t_node *stack);
-void sort_up_to_five(t_node **stack);
+void push_swap(t_node **stack_a, t_node **stack_b);
+int index_min(t_node *stack);
+void sort_to_five(t_node **stack_a, t_node **stack_b);
 
 /* ************************************************************************** */
 

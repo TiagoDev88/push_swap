@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:04:52 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 16:04:52 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/05 10:40:02 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,34 @@ static bool rotate(t_node **stack)
 	add_bottom(stack, first);
 	return (true);
 }
-
+/**
+ * @brief Shift up all elements of stack A by 1.
+ * 
+ * The first element becomes the last one.
+ * @param stack The stack to change.
+ */
 void	ra(t_node **stack)
 {
 	if (rotate(stack))
 		ft_printf("ra\n");
 }
-
+/**
+ * @brief Shift up all elements of stack B by 1.
+ * 
+ * The first element becomes the last one.
+ * @param stack The stack to change.
+ */
 void	rb(t_node **stack)
 {
 	if (rotate(stack))
 		ft_printf("rb\n");
 }
-
+/**
+ * @brief Shift up all elements of stack A and B by 1.
+ * 
+ * The first element becomes the last one.
+ * @param stack The stacks to change.
+ */
 void	rr(t_node **stack_a, t_node **stack_b)
 {
 	bool ra;

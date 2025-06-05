@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:02:57 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/04 11:03:37 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/05 10:44:37 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,36 @@ static bool	swap(t_node **stack)
 	return (true);
 }
 
+/**
+ * @brief Swap the first 2 elements at the top of stack A.
+ * 
+ * Do nothing if there is only one element or none.
+ * @param stack The stack to change.
+ */
 void	sa(t_node **stack_a)
 {
 	if (swap(stack_a))
 		ft_printf("sa\n");
 }
 
+/**
+ * @brief Swap the first 2 elements at the top of stack B.
+ * 
+ * Do nothing if there is only one element or none.
+ * @param stack The stack to change.
+ */
 void	sb(t_node **stack_b)
 {
 	if (swap(stack_b))
 		ft_printf("sb\n");
 }
 
+/**
+ * @brief Swap the first 2 elements at the top of stack A and B.
+ * 
+ * Do nothing if there is only one element or none.
+ * @param stacks The stacks to change.
+ */
 void	ss(t_node **stack_a, t_node **stack_b)
 {
 	bool	sa;
