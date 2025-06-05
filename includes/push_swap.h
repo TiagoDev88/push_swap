@@ -44,8 +44,6 @@ void rb(t_node **stack);
 void rr(t_node **stack_a, t_node **stack_b);
 int stack_size(t_node *stack);
 void push_swap(t_node **stack_a, t_node **stack_b);
-int index_min(t_node *stack);
-void sort_to_five(t_node **stack_a, t_node **stack_b);
 
 /* ************************************************************************** */
 

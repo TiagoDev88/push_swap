@@ -24,6 +24,7 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	if (argc < 2)
 		return (1);
+	//ft_printf("%s\n", argv[1]);
 	if (!validate_args(argc, argv))
 	{
 		ft_printf("Error\n");
@@ -35,10 +36,10 @@ int	main(int argc, char **argv)
 		ft_printf("Error\n");
 		return (1);
 	}
-	print_stack(stack_a, "A");
+	// print_stack(stack_a, "A");
 	push_swap(&stack_a, &stack_b);
-	print_stack(stack_a, "A");
-	print_stack(stack_b, "B");
+	// print_stack(stack_a, "A");
+	// print_stack(stack_b, "B");
 	// sort_up_to_five(&stack_a);
 	//  pb(&stack_a, &stack_b);
 	//  pb(&stack_a, &stack_b);
