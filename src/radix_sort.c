@@ -14,17 +14,15 @@
 
 void	radix_sort(t_node **stack_a, t_node **stack_b, int size)
 {
-	int max_bits;
-	int max_size;
-	int i;
-	int j;
+	int	max_bits;
+	int	max_size;
+	int	i;
+	int	j;
 
 	max_size = size - 1;
 	max_bits = 0;
 	while (max_size >> max_bits)
 		max_bits++;
-	//ft_printf("MAX BITS: %d\n", max_bits);
-	//ft_printf("SIZE: %d\n", size);
 	i = 0;
 	while (i < max_bits)
 	{

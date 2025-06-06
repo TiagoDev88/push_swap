@@ -12,23 +12,22 @@
 
 #include "../includes/push_swap.h"
 
-static bool reverse(t_node **stack)
+static bool	reverse(t_node **stack)
 {
-	t_node *last_node;
-	t_node *tmp;
+	t_node	*last_node;
+	t_node	*tmp;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return (false);
-
 	tmp = *stack;
-	while(tmp->next->next)
+	while (tmp->next->next)
 		tmp = tmp->next;
-	//ft_printf("CONTEUDO DO ULTIMO NO %d\n", tmp->next->value);
 	last_node = tmp->next;
 	tmp->next = NULL;
 	add_top(stack, last_node);
 	return (true);
 }
+
 /**
  * @brief Shift down all elements of stack A by 1.
  * 
@@ -61,8 +60,8 @@ void	rrb(t_node **stack)
  */
 void	rrr(t_node **stack_a, t_node **stack_b)
 {
-	bool rra;
-	bool rrb;
+	bool	rra;
+	bool	rrb;
 
 	rra = reverse(stack_a);
 	rrb = reverse(stack_b);

@@ -12,16 +12,14 @@
 
 #include "../includes/push_swap.h"
 
-static bool push(t_node **from, t_node **to)
+static bool	push(t_node **from, t_node **to)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	if (!from || !*from || !to)
 		return (false);
-
 	tmp = *from;
 	*from = tmp->next;
-	
 	tmp->next = *to;
 	*to = tmp;
 	return (true);

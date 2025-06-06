@@ -14,8 +14,8 @@
 
 static int	index_min(t_node *stack, int index)
 {
-	int pos;
-	
+	int	pos;
+
 	pos = 0;
 	while (stack)
 	{
@@ -27,14 +27,14 @@ static int	index_min(t_node *stack, int index)
 	return (pos);
 }
 
-static void move_to_top(t_node **stack, int pos)
+static void	move_to_top(t_node **stack, int pos)
 {
-	int size;
+	int	size;
 
 	size = stack_size(*stack);
 	if (pos <= size / 2)
 	{
-		while(pos > 0)
+		while (pos > 0)
 		{
 			ra(stack);
 			pos--;
@@ -48,39 +48,38 @@ static void move_to_top(t_node **stack, int pos)
 			pos++;
 		}
 	}
-
 }
 
-void	sort_three(t_node **stack)
+static void	sort_three(t_node **stack)
 {
-	int first;
-	int second;
-	int three;
+	int	first;
+	int	second;
+	int	three;
 
 	first = (*stack)->index;
 	second = (*stack)->next->index;
 	three = (*stack)->next->next->index;
-
 	if (first > second && second < three && first < three)
 		sa(stack);
 	else if (first > second && second < three && first > three)
 		ra(stack);
 	else if (first > second && second > three)
-		{
-			sa(stack);
-			rra(stack);
-		}
+	{
+		sa(stack);
+		rra(stack);
+	}
 	else if (first < second && second > three && first > three)
-			rra(stack);
+		rra(stack);
 	else if (first < second && second > three)
 	{
 		rra(stack);
 		sa(stack);
 	}
 }
+
 static void	sort_to_five(t_node **stack_a, t_node **stack_b, int size)
 {
-	int pos;
+	int	pos;
 
 	if (size == 4)
 	{
@@ -104,9 +103,9 @@ static void	sort_to_five(t_node **stack_a, t_node **stack_b, int size)
 	}
 }
 
-void push_swap(t_node **stack_a, t_node **stack_b)
+void	push_swap(t_node **stack_a, t_node **stack_b)
 {
-	int size;
+	int	size;
 
 	size = stack_size(*stack_a);
 	if (size == 2)

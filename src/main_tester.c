@@ -25,19 +25,14 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	if (!validate_args(argc, argv))
-	{
-		ft_putstr_fd("Error", 2);
-		return (1);
-	}
+		return (ft_putendl_fd("Error", 2), 1);
 	stack_a = init_stack(argc, argv);
 	if (!stack_a)
-	{
-		ft_putendl_fd("Error", 2);
-		return (1);
-	}
+		return (ft_putendl_fd("Error", 2), 1);
 	if (is_order(stack_a))
 		return (0);
 	push_swap(&stack_a, &stack_b);
+	print_stack(stack_a, "A");
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

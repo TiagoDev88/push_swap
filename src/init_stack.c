@@ -35,6 +35,7 @@ static void	assign_indexes(t_node *stack)
 		current_node = current_node->next;
 	}
 }
+
 static t_node	*new_node(int value)
 {
 	t_node	*node;
@@ -64,6 +65,7 @@ void	add_bottom(t_node **stack, t_node *new)
 		temp->next = new;
 	}
 }
+
 void	add_top(t_node **stack, t_node *new)
 {
 	if (stack == NULL || new == NULL)
@@ -92,7 +94,7 @@ t_node	*init_stack(int argc, char **argv)
 		new = new_node(value);
 		if (!new)
 		{
-			free_stack(&head_node); 
+			free_stack(&head_node);
 			return (NULL);
 		}
 		add_bottom(&head_node, new);

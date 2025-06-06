@@ -21,7 +21,6 @@ static bool	swap(t_node **stack)
 		return (false);
 	first = *stack;
 	second = first->next;
-
 	first->next = second->next;
 	second->next = first;
 	*stack = second;

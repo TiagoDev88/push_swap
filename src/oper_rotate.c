@@ -12,14 +12,13 @@
 
 #include "../includes/push_swap.h"
 
-static bool rotate(t_node **stack)
+static bool	rotate(t_node **stack)
 {
-	t_node *first;
-	t_node *second;
+	t_node	*first;
+	t_node	*second;
 
 	if (!stack || !(*stack) || !(*stack)->next)
 		return (false);
-
 	first = *stack;
 	second = first->next;
 	first->next = NULL;
@@ -27,6 +26,7 @@ static bool rotate(t_node **stack)
 	add_bottom(stack, first);
 	return (true);
 }
+
 /**
  * @brief Shift up all elements of stack A by 1.
  * 
@@ -38,6 +38,7 @@ void	ra(t_node **stack)
 	if (rotate(stack))
 		ft_printf("ra\n");
 }
+
 /**
  * @brief Shift up all elements of stack B by 1.
  * 
@@ -49,6 +50,7 @@ void	rb(t_node **stack)
 	if (rotate(stack))
 		ft_printf("rb\n");
 }
+
 /**
  * @brief Shift up all elements of stack A and B by 1.
  * 
@@ -57,8 +59,8 @@ void	rb(t_node **stack)
  */
 void	rr(t_node **stack_a, t_node **stack_b)
 {
-	bool ra;
-	bool rb;
+	bool	ra;
+	bool	rb;
 
 	ra = rotate(stack_a);
 	rb = rotate(stack_b);
