@@ -62,8 +62,8 @@ int	main(int argc, char **argv)
 	if (is_order(stack_a))
 		return (0);
 	push_swap(&stack_a, &stack_b);
-	print_stacks_side_by_side(stack_a, stack_b);
-	print_stack(stack_a, "A");
+	//print_stacks_side_by_side(stack_a, stack_b);
+	//print_stack(stack_a, "A");
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

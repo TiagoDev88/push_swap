@@ -14,7 +14,7 @@ NAME = push_swap
 NAME_BONUS = checker
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I includes -I libft
+CFLAGS =  -I includes -I libft
 
 LIBFT_DIR = includes/libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -22,7 +22,7 @@ LIBFT = $(LIBFT_DIR)/libft.a
 SRC_DIR = src
 SRCS = src/main_tester.c src/init_stack.c src/validate_args.c src/utils_stack.c \
 		src/oper_swap.c src/oper_push.c src/oper_reverse.c src/oper_rotate.c \
-		src/push_swap.c src/radix_sort.c
+		src/push_swap.c src/radix_sort.c src/turk_sort.c
 
 SRC_DIR_BONUS = src_bonus
 SRCS_BONUS = 

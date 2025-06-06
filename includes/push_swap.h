@@ -25,6 +25,9 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
+void push_back_to_a(t_node **a, t_node **b);
+void push_chunks(t_node **a, t_node **b, int size);
+
 /* ****************************** INIT STACK ******************************** */
 
 t_node	*init_stack(int argc, char **argv);
@@ -57,6 +60,7 @@ void	ss(t_node **stack_a, t_node **stack_b);
 /* ****************************** PUSH SWAP ********************************* */
 
 void	push_swap(t_node **stack_a, t_node **stack_b);
+int		find_index(t_node *stack, int index);
 
 /* ****************************** RADIX SORT ******************************** */
 

@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-static int	index_min(t_node *stack, int index)
+int	find_index(t_node *stack, int index)
 {
 	int	pos;
 
@@ -24,7 +24,7 @@ static int	index_min(t_node *stack, int index)
 		stack = stack->next;
 		pos++;
 	}
-	return (pos);
+	return (-1);
 }
 
 static void	move_to_top(t_node **stack, int pos)
@@ -83,7 +83,7 @@ static void	sort_to_five(t_node **stack_a, t_node **stack_b, int size)
 
 	if (size == 4)
 	{
-		pos = index_min(*stack_a, 0);
+		pos = find_index(*stack_a, 0);
 		move_to_top(stack_a, pos);
 		pb(stack_a, stack_b);
 		sort_three(stack_a);
@@ -91,10 +91,10 @@ static void	sort_to_five(t_node **stack_a, t_node **stack_b, int size)
 	}
 	else
 	{
-		pos = index_min(*stack_a, 0);
+		pos = find_index(*stack_a, 0);
 		move_to_top(stack_a, pos);
 		pb(stack_a, stack_b);
-		pos = index_min(*stack_a, 1);
+		pos = find_index(*stack_a, 1);
 		move_to_top(stack_a, pos);
 		pb(stack_a, stack_b);
 		sort_three(stack_a);
@@ -115,5 +115,9 @@ void	push_swap(t_node **stack_a, t_node **stack_b)
 	else if (size > 3 && size < 6)
 		sort_to_five(stack_a, stack_b, size);
 	else
-		radix_sort(stack_a, stack_b, size);
+	{
+		//radix_sort(stack_a, stack_b, size);
+		push_chunks(stack_a, stack_b, size);
+		push_back_to_a(stack_a, stack_b);
+	}
 }
