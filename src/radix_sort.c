@@ -35,7 +35,7 @@ void	radix_sort(t_node **stack_a, t_node **stack_b, int size)
 				ra(stack_a);
 			j++;
 		}
-		while (*stack_b > 0)
+		while (*stack_b)
 			pa(stack_b, stack_a);
 		i++;
 	}

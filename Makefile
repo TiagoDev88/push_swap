@@ -14,13 +14,10 @@ NAME = push_swap
 NAME_BONUS = checker
 
 CC = cc
-CFLAGS =   -I includes -I libft
+CFLAGS = -Wall -Wextra -Werror -I includes -I libft
 
 LIBFT_DIR = includes/libft
 LIBFT = $(LIBFT_DIR)/libft.a
-
-MLX_DIR = minilibx-linux
-MLX = $(MLX_DIR)/libmlx.a
 
 SRC_DIR = src
 SRCS = src/main_tester.c src/init_stack.c src/validate_args.c src/utils_stack.c \
