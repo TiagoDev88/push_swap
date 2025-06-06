@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:05:45 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/04 11:01:06 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/06 14:34:52 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,18 @@ int	stack_size(t_node *stack)
 		count++;
 	}
 	return (count);
+}
+
+int is_order(t_node *stack)
+{
+	t_node *curr;
+
+	curr = stack;
+	while (curr->next)
+	{
+		if (curr->index > curr->next->index)
+			return (0);
+		curr = curr->next;
+	}
+	return (1);
 }

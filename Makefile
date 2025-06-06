@@ -6,7 +6,7 @@
 #    By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 10:51:27 by tfilipe-          #+#    #+#              #
-#    Updated: 2025/06/05 16:16:57 by tfilipe-         ###   ########.fr        #
+#    Updated: 2025/06/06 11:25:44 by tfilipe-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ MLX = $(MLX_DIR)/libmlx.a
 SRC_DIR = src
 SRCS = src/main_tester.c src/init_stack.c src/validate_args.c src/utils_stack.c \
 		src/oper_swap.c src/oper_push.c src/oper_reverse.c src/oper_rotate.c \
-		src/push_swap.c
+		src/push_swap.c src/radix_sort.c
 
 SRC_DIR_BONUS = src_bonus
 SRCS_BONUS = 

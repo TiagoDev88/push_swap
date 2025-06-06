@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:49:35 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/05 15:48:13 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/06 14:24:22 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void rb(t_node **stack);
 void rr(t_node **stack_a, t_node **stack_b);
 int stack_size(t_node *stack);
 void push_swap(t_node **stack_a, t_node **stack_b);
+void	radix_sort(t_node **stack_a, t_node **stack_b, int size);
+int is_order(t_node *stack);
 
 /* ************************************************************************** */
 

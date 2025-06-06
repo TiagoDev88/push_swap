@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 22:36:32 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/05 16:20:26 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/06 12:01:58 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,6 @@ void push_swap(t_node **stack_a, t_node **stack_b)
 		sort_three(stack_a);
 	else if (size > 3 && size < 6)
 		sort_to_five(stack_a, stack_b, size);
+	else
+		radix_sort(stack_a, stack_b, size);
 }
