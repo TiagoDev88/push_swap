@@ -17,11 +17,11 @@
 <h3 align="center">
 	<a href="#-about">About</a>
 	<span> · </span>
-	<a href="-algorithm">Algorithm</a>
+	<a href="#-algorithm">Algorithm</a>
 	<span> · </span>
-	<a href="-usage">Usage</a>
+	<a href="#-usage">Usage</a>
 	<span> · </span>
-	<a href="-bonus">Bonus</a>
+	<a href="#-bonus">Bonus</a>
 	<span> · </span>
 	<a href="#-author">Author</a>
 </h3>
