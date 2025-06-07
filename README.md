@@ -21,9 +21,9 @@
 	<span> · </span>
 	<a href="#usage-">Usage</a>
 	<span> · </span>
-	<a href="#bonus">Bonus</a>
+	<a href="#bonus-">Bonus</a>
 	<span> · </span>
-	<a href="#author">Author</a>
+	<a href="#author-">Author</a>
 </h3>
 
 ---
@@ -36,7 +36,7 @@ The program takes a list of integers as input and outputs a sequence of instruct
 
 ---
 
-## Algorithm ⚙️
+## Algorithm 🧮
 
 The solution implements a **chunk-based sorting method** using the following approach:
 
@@ -52,7 +52,7 @@ This strategy optimizes the number of operations, especially for inputs up to 50
 
 ---
 
-## Usage 🛠️
+## Usage 📘
 
 ### Requirements
 
@@ -79,7 +79,7 @@ make
 ```
 The program outputs the sequence of stack operations (sa, pb, ra, etc.) needed to sort the list.
 
-## Bonus - checker 🎁
+## Bonus 🎁
 
 The bonus program checker reads the same list of integers, then reads a sequence of instructions from standard input and verifies if after applying those instructions, the stack is sorted.
 
