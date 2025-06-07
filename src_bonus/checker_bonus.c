@@ -6,12 +6,11 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 13:58:10 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 19:25:25 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/07 20:25:26 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-# include "../includes/push_swap_bonus.h"
-
+#include "../includes/push_swap_bonus.h"
 
 static void	execute_instruction(char *line, t_node **a, t_node **b)
 {
@@ -41,11 +40,24 @@ static void	execute_instruction(char *line, t_node **a, t_node **b)
 		(ft_putendl_fd("Error", 2), exit(1));
 }
 
+static void	get_line_from_stdin(t_node **a, t_node **b)
+{
+	char	*line;
+
+	line = get_next_line(0);
+	while (line)
+	{
+		line[ft_strlen(line) - 1] = '\0';
+		execute_instruction(line, a, b);
+		free(line);
+		line = get_next_line(0);
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_node	*a;
 	t_node	*b;
-	char	*line;
 
 	b = NULL;
 	if (argc < 2)
@@ -55,12 +67,7 @@ int	main(int argc, char **argv)
 	a = init_stack(argc, argv);
 	if (!a)
 		return (ft_putendl_fd("Error", 2), 1);
-	while ((line = get_next_line(0)))
-	{
-		line[ft_strlen(line) - 1] = '\0';
-		execute_instruction(line, &a, &b);
-		free(line);
-	}
+	get_line_from_stdin(&a, &b);
 	if (is_order(a) && b == NULL)
 		ft_printf("OK\n");
 	else
