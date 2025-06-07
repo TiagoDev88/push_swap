@@ -6,7 +6,7 @@
 #    By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 10:51:27 by tfilipe-          #+#    #+#              #
-#    Updated: 2025/06/07 19:37:41 by tfilipe-         ###   ########.fr        #
+#    Updated: 2025/06/07 20:46:19 by tfilipe-         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -22,7 +22,7 @@ LIBFT = $(LIBFT_DIR)/libft.a
 SRC_DIR = src
 SRCS = src/main_tester.c src/init_stack.c src/validate_args.c \
 		src/oper_swap.c src/oper_push.c src/oper_reverse.c src/oper_rotate.c \
-		src/push_swap.c src/radix_sort.c src/turk_sort.c src/utils_stack.c
+		src/push_swap.c src/radix_sort.c src/chunk_sort.c src/utils_stack.c
 
 SRC_DIR_BONUS = src_bonus
 SRCS_BONUS = src_bonus/checker_bonus.c src_bonus/init_stack_bonus.c \

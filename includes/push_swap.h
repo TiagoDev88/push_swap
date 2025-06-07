@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:49:35 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 20:30:13 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/07 20:45:23 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -25,7 +25,7 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
-/* ****************************** TURK SORT ********************************* */
+/* ****************************** CHUNK SORT ******************************** */
 
 void	push_back_to_a(t_node **a, t_node **b);
 void	push_chunks(t_node **a, t_node **b, int size);
