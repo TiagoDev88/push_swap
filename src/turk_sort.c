@@ -64,11 +64,21 @@ void	push_back_to_a(t_node **a, t_node **b)
 		max = get_max_index(*b);
 		pos = find_index(*b, max);
 		if (pos <= stack_size(*b) / 2)
-			while ((*b)->index != max)
+		{
+			while (pos > 0)
+			{
 				rb(b);
+				pos--;
+			}
+		}
 		else
-			while ((*b)->index != max)
+		{
+			while (pos < stack_size(*b))
+			{
 				rrb(b);
+				pos++;
+			}
+		}
 		pa(b, a);
 	}
 }
