@@ -20,7 +20,7 @@ void	push_chunks(t_node **a, t_node **b, int size)
 	if (size <= 100)
 		chunk_size = 15;
 	else
-		chunk_size = 29;
+		chunk_size = 30;
 	i = 0;
 	while (*a)
 	{
@@ -53,6 +53,7 @@ static int	get_max_index(t_node *stack)
 	}
 	return (max);
 }
+
 void	push_back_to_a(t_node **a, t_node **b)
 {
 	int	pos;
