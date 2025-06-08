@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 11:16:59 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/03 11:54:09 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 13:04:09 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include "../includes/push_swap.h"
 
@@ -26,11 +26,7 @@ int	main(int argc, char **argv)
 	if (!stack_a)
 		return (ft_putendl_fd("Error", 2), 1);
 	if (is_order(stack_a))
-	{
-		free_stack(&stack_a);
-		free_stack(&stack_b);
-		return (0);
-	}
+		return (free_stack(&stack_a), 0);
 	push_swap(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
