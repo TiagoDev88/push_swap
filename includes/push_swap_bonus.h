@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:49:35 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 19:34:45 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:50:32 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -59,6 +59,7 @@ void	ss(t_node **stack_a, t_node **stack_b);
 void	free_stack(t_node **stack);
 int		stack_size(t_node *stack);
 int		is_order(t_node *stack);
+void	free_array(char **arr);
 
 /* ****************************** VALIDATE ARGS ***************************** */
 

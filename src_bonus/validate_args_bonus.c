@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:25:40 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 19:26:11 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:53:51 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -51,7 +51,7 @@ int	validate_args(int argc, char **argv)
 	int		i;
 	long	num;
 
-	i = 1;
+	i = 0;
 	while (i < argc)
 	{
 		if (!is_valid_number(argv[i]))

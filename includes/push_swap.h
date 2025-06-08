@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 10:49:35 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 20:45:23 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:50:16 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -73,6 +73,7 @@ void	radix_sort(t_node **stack_a, t_node **stack_b, int size);
 void	free_stack(t_node **stack);
 int		stack_size(t_node *stack);
 int		is_order(t_node *stack);
+void	free_array(char **arr);
 
 /* ****************************** VALIDATE ARGS ***************************** */
 

@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:02:05 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 19:25:52 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:54:00 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -87,7 +87,7 @@ t_node	*init_stack(int argc, char **argv)
 	int		value;
 
 	head_node = NULL;
-	i = 1;
+	i = 0;
 	while (i < argc)
 	{
 		value = ft_atoi(argv[i]);

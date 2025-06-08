@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 13:58:10 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/07 20:25:26 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:58:04 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -54,17 +54,44 @@ static void	get_line_from_stdin(t_node **a, t_node **b)
 	}
 }
 
+static char	**check_args(int argc, char **argv, int *new_argc)
+{
+	char	**args;
+
+	if (argc == 2)
+	{
+		args = ft_split(argv[1], ' ');
+		if (!args || !args[0])
+			return (free_array(args), NULL);
+		*new_argc = 0;
+		while (args[*new_argc])
+			(*new_argc)++;
+	}
+	else
+	{
+		args = &argv[1];
+		*new_argc = argc - 1;
+	}
+	return (args);
+}
+
 int	main(int argc, char **argv)
 {
 	t_node	*a;
 	t_node	*b;
+	int		new_argc;
 
 	b = NULL;
 	if (argc < 2)
-		return (0);
-	if (!validate_args(argc, argv))
+		return (1);
+	argv = check_args(argc, argv, &new_argc);
+	if (!argv)
 		return (ft_putendl_fd("Error", 2), 1);
-	a = init_stack(argc, argv);
+	if (!validate_args(new_argc, argv))
+		return (ft_putendl_fd("Error", 2), 1);
+	a = init_stack(new_argc, argv);
+	if (argc == 2)
+		free_array(argv);
 	if (!a)
 		return (ft_putendl_fd("Error", 2), 1);
 	get_line_from_stdin(&a, &b);
