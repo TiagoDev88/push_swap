@@ -6,7 +6,7 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 11:16:59 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/08 20:56:31 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/08 21:06:49 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 		return (1);
 	argv = check_args(argc, argv, &new_argc);
 	if (!argv)
-		return (1);
+		return (ft_putendl_fd("Error", 2), 1);
 	if (!validate_args(new_argc, argv))
 	{
 		if (argc == 2)

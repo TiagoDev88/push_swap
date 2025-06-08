@@ -88,18 +88,18 @@ int	main(int argc, char **argv)
 		return (1);
 	argv = check_args(argc, argv, &new_argc);
 	if (!argv)
-		return (1);
+		return (ft_putendl_fd("Error", 2),1);
 	if (!validate_args(new_argc, argv))
 	{
 		if (argc == 2)
 			free_array(argv);
-		return (ft_putendl_fd("Error validate", 2), 1);
+		return (ft_putendl_fd("Error", 2), 1);
 	}
 	stack_a = init_stack(new_argc, argv);
 	if (argc == 2)
 		free_array(argv);
 	if (!stack_a)
-		return (ft_putendl_fd("Error stack", 2), 1);
+		return (ft_putendl_fd("Error", 2), 1);
 	if (is_order(stack_a))
 		return (free_stack(&stack_a), 0);
 	exec_push_swap(&stack_a, &stack_b);
