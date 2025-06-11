@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 11:16:59 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/06/08 21:06:49 by tfilipe-         ###   ########.fr       */
+/*   Updated: 2025/06/11 13:17:46 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
@@ -33,7 +33,7 @@ static char	**check_args(int argc, char **argv, int *new_argc)
 	return (args);
 }
 
-static void exec_push_swap(t_node **stack_a, t_node **stack_b)
+static void	exec_push_swap(t_node **stack_a, t_node **stack_b)
 {
 	push_swap(stack_a, stack_b);
 	free_stack(stack_a);

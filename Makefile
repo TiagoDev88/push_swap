@@ -1,4 +1,4 @@
-#******************************************************************************#
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
@@ -6,9 +6,9 @@
 #    By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 10:51:27 by tfilipe-          #+#    #+#              #
-#    Updated: 2025/06/07 20:46:19 by tfilipe-         ###   ########.fr        #
+#    Updated: 2025/06/11 12:36:24 by tfilipe-         ###   ########.fr        #
 #                                                                              #
-#******************************************************************************#
+# **************************************************************************** #
 
 NAME = push_swap
 NAME_BONUS = checker
@@ -20,7 +20,7 @@ LIBFT_DIR = includes/libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 SRC_DIR = src
-SRCS = src/main_tester.c src/init_stack.c src/validate_args.c \
+SRCS = src/main.c src/init_stack.c src/validate_args.c \
 		src/oper_swap.c src/oper_push.c src/oper_reverse.c src/oper_rotate.c \
 		src/push_swap.c src/radix_sort.c src/chunk_sort.c src/utils_stack.c
 
