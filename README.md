@@ -1,6 +1,8 @@
-<h1 align="center">
-	🚀 push_swap
-</h1>
+<h2 align="center">
+
+[![PUSH_SWAP](https://github.com/TiagoDev88/42-project-badges/blob/main/badges/push_swapm.png)](https://github.com/TiagoDev88/push_swap) 
+	
+</h2>
 
 <p align="center">
 	<b><i>Sorting integers with limited stack operations - 42 School project</i></b><br>
